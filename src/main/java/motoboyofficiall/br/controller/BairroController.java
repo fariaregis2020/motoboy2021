@@ -14,13 +14,13 @@ public class BairroController {
 	@Autowired
 	private BairroRepository bairroRepository;
 
-	@RequestMapping(method = RequestMethod.GET, value = "/bairro")
+	@RequestMapping(method = RequestMethod.GET, value = "/salvar_bairro")
 	public String bairro () {
 		return "/cadastro/bairro";
 	}
 	
 	
-	@RequestMapping(method = RequestMethod.POST, value = "/bairro")
+	@RequestMapping(method = RequestMethod.POST, value = "/salvar_bairro")
 	public String bairro (Bairro bairro) {
 		bairroRepository.save(bairro);
 		return "/cadastro/bairro";

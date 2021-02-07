@@ -8,32 +8,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Bairro  implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class Regiao implements Serializable {
 
+	
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id ;
-	private String nomeBairro;
+	private String descricao ;
 	
 	
-	
-	
-	public Bairro () {
-		
+	public Regiao() {
 		
 	}
 
 
-
-
-	public Bairro(long id, String nomeBairro) {
+	public Regiao(long id, String descricao) {
 		super();
 		this.id = id;
-		this.nomeBairro = nomeBairro;
+		this.descricao = descricao;
 	}
-
-
 
 
 	public long getId() {
@@ -41,31 +35,26 @@ public class Bairro  implements Serializable {
 	}
 
 
-
-
 	public void setId(long id) {
 		this.id = id;
 	}
 
 
-
-
-	public String getNomeBairro() {
-		return nomeBairro;
+	public String getDescricao() {
+		return descricao;
 	}
 
 
-
-
-	public void setNomeBairro(String nomeBairro) {
-		this.nomeBairro = nomeBairro;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-
-
+	
+	
+	
+	
 	
 	
 	
 	
 	
 }
-

@@ -3,9 +3,9 @@ package motoboyofficiall.br.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import motoboyofficiall.br.entities.Cidade;
+import motoboyofficiall.br.entities.Curso;
 
 @Repository
-public interface CidadeRepository extends CrudRepository<Cidade, Long> {
+public interface CursoRepository extends CrudRepository<Curso, Long> {
 
 }

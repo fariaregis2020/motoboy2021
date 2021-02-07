@@ -2,35 +2,36 @@ package motoboyofficiall.br.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
-public class Cidade implements Serializable{
-
-
+public class Curso implements Serializable{
+	
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id; 
+	private long id ;
+	private String curso; 
+	private String duracao;
 	
-	private String cidade; 
-	private String uf; 
 	
-	
-	public Cidade () {
+	public Curso () {
 		
 	}
 
 
-	public Cidade(long id, String cidade, String uf) {
+	public Curso(long id, String curso, String duracao) {
 		super();
 		this.id = id;
-		this.cidade = cidade;
-		this.uf = uf;
+		this.curso = curso;
+		this.duracao = duracao;
 	}
 
 
@@ -44,23 +45,23 @@ public class Cidade implements Serializable{
 	}
 
 
-	public String getCidade() {
-		return cidade;
+	public String getCurso() {
+		return curso;
 	}
 
 
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setCurso(String curso) {
+		this.curso = curso;
 	}
 
 
-	public String getUf() {
-		return uf;
+	public String getDuracao() {
+		return duracao;
 	}
 
 
-	public void setUf(String uf) {
-		this.uf = uf;
+	public void setDuracao(String duracao) {
+		this.duracao = duracao;
 	}
 
 
@@ -81,7 +82,7 @@ public class Cidade implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Cidade other = (Cidade) obj;
+		Curso other = (Curso) obj;
 		if (id != other.id)
 			return false;
 		return true;
@@ -90,5 +91,5 @@ public class Cidade implements Serializable{
 	
 	
 	
-	
+
 }
